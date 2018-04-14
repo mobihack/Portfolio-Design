@@ -62,6 +62,8 @@
 			}
 			.portfolio-items{
 				margin-top: 2.5rem;
+				margin-left:-10px;
+				margin-right:-10px;
 			}
 			.portfolio-items .card{
 				border-radius: 0px;
@@ -92,7 +94,7 @@
 			footer .container{
 				color: #6c757d;
 				border-top: 1px solid #6c757d;
-				padding: 3rem 0;
+				padding: 3rem 15px;
 			}
 		.navbar-toggler{
 		padding: 0px;
@@ -102,7 +104,7 @@
 		border-radius: .57143rem;
 			
 			display: inline-block;
-		margin: 0 1em;
+		
 		border: none;
 		background: 0 0;
 		width: 30px;
@@ -260,9 +262,6 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-				var toggle = document.getElementsByClassName('navbar-toggler*')[0];
-
-// Toggle if navbar menu is open or closed
 function toggleMenu(e) {
     
     document.getElementById((e.dataset.target.charAt( 0 )==='#')?e.dataset.target.slice(1):e.dataset.target).classList.toggle(e.dataset.toggle);
