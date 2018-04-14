@@ -71,15 +71,14 @@
 				font-size: 1.25rem;
 				margin-bottom: 0.5rem;
 			}
-			.portfolio-itemsa .card h2 a{
-				color:#555F61;
-				padding-bottom: 3px;
-				border-bottom: 1px solid transparent;
-				transition: 0.4s;
+			.portfolio-items .card h2 a{
+				transition: 0.2s;
+				color: white;
+				opacity: 0.8
 				}
-			.portfolio-itemsa .card h2 a:hover{
+			.portfolio-items .card h2 a:hover{
 				text-decoration: none;
-				border-bottom-color: #555F61;
+				opacity: 1
 			}
 			.portfolio-items .card p{
 				font-size: 0.90rem;
@@ -166,10 +165,13 @@
 		}
 		.pi-item .card{
 		position: relative;
-		width: 90%;
+		width: 95%;
 		max-width: 400px;
 		margin: auto;
 		overflow: hidden;
+		}
+		.pi-item .card .card-img-top{
+			border-radius: 0px
 		}
 		.pi-item .card .card-body{
 		background: rgba(0,0,0,0.7);
@@ -229,13 +231,13 @@
 		.pi-item{
 			transition: 0.4s;
 			opacity:1;
-			margin-bottom: 10px;
+			margin-bottom: 15px;
 		}
 		.pi-item.is-shown{
 			opacity:1;
 			visibility: visible;
 		}
-		.pi-item:hover{
+		.pi-item:hover,.pi-item:focus{
 			transform:scale(1.05);
 		}
 		.pi-item.is-hidden{
@@ -257,11 +259,21 @@
 		</style>
 	</head>
 	<body>
+		<script type="text/javascript">
+				var toggle = document.getElementsByClassName('navbar-toggler*')[0];
+
+// Toggle if navbar menu is open or closed
+function toggleMenu(e) {
+    
+    document.getElementById((e.dataset.target.charAt( 0 )==='#')?e.dataset.target.slice(1):e.dataset.target).classList.toggle(e.dataset.toggle);
+    e.setAttribute('aria-expanded',e.getAttribute('aria-expanded')=='true'?'false':'true');
+}
+			</script>
 		<!-- Navigation -->
 		<nav class="navbar navbar-light">
 			<div class="container">
-				<a class="navbar-brand">start</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<a class="navbar-brand">portfolio</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu(this);">
 				<span class="navbar-icon-lines"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
@@ -305,6 +317,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row align-items-start no-gutters portfolio-items">
 				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
 					<div class="card">
@@ -1120,6 +1133,7 @@
 	});
 	});
 	});
+
 	</script>
 </body>
 </html>
