@@ -14,7 +14,7 @@ var elem = document.querySelector('.portfolio-items');
 	columnWidth: '.grid-sizer',
 	percentPosition: true
 	});
-	
+	document.body.classList.toggle('is-loading');
 };
 
 //filter content
