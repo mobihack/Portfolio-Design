@@ -1,1138 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<title>Portfolio Template</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<!-- Bootstrap core CSS -->
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<!-- Custom styles for this template -->
-		<style>
-			body{
-				font-family: 'Open Sans', sans-serif;
-			}
-			ul.filter-list{
-				text-align: right;
-				margin-bottom: 0px;
-				padding: 0px;
-			}
-			@media (max-width: 768px) {
-				ul.filter-list{
-					text-align: center;
-					margin-top: 2rem;
-				}
-			}
-			ul.filter-list li {
-				display:inline;
-				margin-left:1rem;
-				font-size: 0.75rem;
-			}
-			ul.filter-list li a{
-				padding: 3px;
-				padding-bottom: 5px;
-				border-bottom: 1px solid transparent;
-				transition: 0.4s;
-				color:#555F61;
-			}
-			ul.filter-list li a:hover{
-				text-decoration:none;
-				border-bottom-color: #555F61
-			}
-			ul.filter-list li.is-active a,ul.filter-list li.is-active a:hover{
-				border-bottom-color: #131516;
-				color: #131516;
-			}
-			.navbar-light .navbar-toggler{
-				border: none;
-			}
-			nav.navbar{
-				margin-bottom: 100px;
-			}
-			.portfolio-heading h1{
-				font-size:1.5rem;
-				color: #131516;
-			}
-			.portfolio-heading p{
-			font-size:1rem;
-				color: #555F61;
-				margin:0px;
-			}
-			.portfolio-items{
-				margin-top: 2.5rem;
-				margin-left:-10px;
-				margin-right:-10px;
-			}
-			.portfolio-items .card{
-				border-radius: 0px;
-				border: none;
-			}
-			.portfolio-items .card h2{
-				font-size: 1.25rem;
-				margin-bottom: 0.5rem;
-			}
-			.portfolio-items .card h2 a{
-				transition: 0.2s;
-				color: white;
-				opacity: 0.8
-				}
-			.portfolio-items .card h2 a:hover{
-				text-decoration: none;
-				opacity: 1
-			}
-			.portfolio-items .card p{
-				font-size: 0.90rem;
-			}
-			.portfolio-items .card .card-body{
-				padding: 1rem 0;
-			}
-			footer{
-				margin-top: 3rem;
-			}
-			footer .container{
-				color: #6c757d;
-				border-top: 1px solid #6c757d;
-				padding: 3rem 15px;
-			}
-		.navbar-toggler{
-		padding: 0px;
-		transition: .3s;
-		cursor: pointer;
-		user-select: none;
-		border-radius: .57143rem;
-			
-			display: inline-block;
-		
-		border: none;
-		background: 0 0;
-		width: 30px;
-		height: 40px;
-		}
-		.navbar-toggler:focus{
-			outline: 0;
-		}
-		.navbar-toggler .navbar-icon-lines,.navbar-toggler .navbar-icon-lines::after, .navbar-toggler .navbar-icon-lines::before {
-			display: inline-block;
-		width: 30px;
-		height: 3px;
-		background: black;
-		border-radius: 0;
-		transition: .3s;
-		}
-		.navbar-toggler .navbar-icon-lines {
-		
-		position: relative;
-			transition:background .3s .5s ease
-		}
-		.navbar-toggler .navbar-icon-lines::after, .navbar-toggler .navbar-icon-lines::before {
-		
-		position: absolute;
-		left: 0;
-		content: '';
-		-webkit-transform-origin: .28571rem center;
-		transform-origin: .28571rem center;
-		}
-		.navbar-toggler .navbar-icon-lines:after,.navbar-toggler .navbar-icon-lines:before {
-			-webkit-transform-origin:50% 50%;
-			transform-origin:50% 50%;
-			transition:top .3s .6s ease,-webkit-transform .3s ease;
-			transition:top .3s .6s ease,transform .3s ease
-		}
-		.navbar-toggler .navbar-icon-lines::before {
-		top: 10px;
-		}
-		.navbar-toggler .navbar-icon-lines::after {
-		top: -10px;
-		}
-		.navbar-toggler[aria-expanded="true"] .navbar-icon-lines {
-			transition:background .3s 0s ease;
-			background:0 0
-		}
-		.navbar-toggler[aria-expanded="true"] .navbar-icon-lines:after,.navbar-toggler[aria-expanded="true"] .navbar-icon-lines:before {
-			transition:top .3s ease,-webkit-transform .3s .5s ease;
-			transition:top .3s ease,transform .3s .5s ease;
-			top:0;
-		}
-		.navbar-toggler[aria-expanded="true"] .navbar-icon-lines:before {
-			-webkit-transform:rotate3d(0,0,1,45deg);
-			transform:rotate3d(0,0,1,45deg)
-		}
-		.navbar-toggler[aria-expanded="true"] .navbar-icon-lines:after {
-			-webkit-transform:rotate3d(0,0,1,-45deg);
-			transform:rotate3d(0,0,1,-45deg)
-		}
-		.pi-item .card .card-body{
-		}
-		.pi-item .card{
-		position: relative;
-		width: 95%;
-		max-width: 400px;
-		margin: auto;
-		overflow: hidden;
-		}
-		.pi-item .card .card-img-top{
-			border-radius: 0px
-		}
-		.pi-item .card .card-body{
-		background: rgba(0,0,0,0.7);
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		opacity: 0;
-		-webkit-transition: all 0.4s ease-in-out 0s;
-		-moz-transition: all 0.4s ease-in-out 0s;
-		transition: all 0.4s ease-in-out 0s;
-		}
-		.pi-item .card:hover .card-body{
-		opacity: 1;
-		}
-		.pi-item.is-hidden .card:hover .card-body{
-			opacity: 0
-		}
-		.card-details h2 a{
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-}
 
-.card-details p{
-  color: #fff;
-  font-size: 0.8em;
-}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Portfolio Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/portfolio.css" rel="stylesheet">
+</head>
 
-		.card-details {
-		position: absolute;
-		text-align: center;
-		padding-left: 1em;
-		padding-right: 1em;
-		width: 100%;
-		top: 50%;
-		left: 50%;
-		opacity: 0;
-		-webkit-transform: translate(-50%, -50%);
-		-moz-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		-webkit-transition: all 0.3s ease-in-out 0s;
-		-moz-transition: all 0.3s ease-in-out 0s;
-		transition: all 0.3s ease-in-out 0s;
-		top: 80%;
-		}
-		.pi-item .card:hover .card-details{
-		top: 50%;
-		left: 50%;
-		opacity: 1;
-		}
-		.pi-item{
-			transition: 0.4s;
-			opacity:1;
-			margin-bottom: 15px;
-		}
-		.pi-item.is-shown{
-			opacity:1;
-			visibility: visible;
-		}
-		.pi-item:hover,.pi-item:focus{
-			transform:scale(1.05);
-		}
-		.pi-item.is-hidden{
-			/*max-width:0px;
-			max-height: 0px;
-			opacity:0;
-			visibility: hidden;
-			padding: 0px;*/
-			 filter: blur(20px) grayscale(80%);
-			 transform:scale(0.5);
-		}
-		.pi-item.is-hidden.is-none{
-			/*display: none;*/
-		}
-		a[data-filter]{
-			cursor: pointer;
-		}
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="https://github.com/mobihack"><img src="assets/img/logo.png" alt="Mobihack Logo Outline" style="height: 32px"></a>
+            <a class="btn btn-outline-dark contact-button">Say Hello</a>
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-md-6">
+                <div class="portfolio-heading">
+                    <div>
+                        <h1 class="">Portfolio</h1>
+                    </div>
+                    <div>
+                        <p>My everyday work is presented here.</p>
+                    </div>
+                    <div>
+                        <p>For more check out my portfolio on dribbble.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="portfolio-heading">
+                    <ul class="filter-list">
+                        <li class="is-active"><a data-filter data-type="filter-reset">All</a></li>
+                        <li><a data-filter data-type="flower">Flower</a></li>
+                        <li><a data-filter data-type="sea">Sea</a></li>
+                        <li><a data-filter data-type="mountain">Mountain</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-		</style>
-	</head>
-	<body>
-		<script type="text/javascript">
-function toggleMenu(e) {
-    
-    document.getElementById((e.dataset.target.charAt( 0 )==='#')?e.dataset.target.slice(1):e.dataset.target).classList.toggle(e.dataset.toggle);
-    e.setAttribute('aria-expanded',e.getAttribute('aria-expanded')=='true'?'false':'true');
-}
-			</script>
-		<!-- Navigation -->
-		<nav class="navbar navbar-light">
-			<div class="container">
-				<a class="navbar-brand">portfolio</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu(this);">
-				<span class="navbar-icon-lines"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link">Services</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- Page Content -->
-		<div class="container">
-			<div class="row align-items-end">
-				<div class="col-md-6">
-					<div class="portfolio-heading">
-						<div><h1 class="">Portfolio</h1></div>
-						<div><p>My everyday work is presented here.</p></div>
-						<div><p>For more check out my portfolio on dribbble.</p></div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="portfolio-heading">
-						<ul class="filter-list">
-							<li class="is-active"><a data-filter data-type="filter-reset">All</a></li>
-							<li><a data-filter data-type="flower">Flower</a></li>
-							<li><a data-filter data-type="sea">Sea</a></li>
-							<li><a data-filter data-type="mountain">Mountain</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row align-items-start no-gutters portfolio-items">
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-		<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Gorgeous white rose photo</a></h2>
-							<p class="text-muted card-text">by Galina N (@galina88)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
-					<div class="card">
-						<img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
-						<div class="card-body">
-							<div class="card-details">
-								<h2><a href="#">Yellow Sunflower</a></h2>
-								<p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-					<div class="card">
-						<img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
-						<div class="card-body"><div class="card-details">
-							<h2><a href="#">Sunset by the sea</a></h2>
-							<p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Icy blue mountain range</a></h2>
-						<p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
-				<div class="card">
-					<img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Rock, water, sea and coast</a></h2>
-						<p class="text-muted card-text">Jon Tyson (@jontyson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
-				<div class="card">
-					<img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
-					<div class="card-body"><div class="card-details">
-						<h2><a href="#">Mountain, snow, landscape and rock</a></h2>
-						<p class="text-muted card-text">Lance Anderson (@lanceanderson)</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="grid-sizer col-xl-3 col-lg-4 col-sm-6 col-xs-12"></div>
-		</div>
-		
-	</div>
-	
-	<footer class="footer">
-		<div class="container">
-			<div class="row align-items-end">
-				<div class="col-md-6">
-					<p>© Copyright 2018. All Rights Reserved.</p>
-				</div>
-				<div class="col-md-6 text-right">
-					<p>Created with <span style="color:red;">♥</span> by mobihack</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Bootstrap core JavaScript -->
-	<!--<script src="vendor/jquery/jquery.min.js"></script>
+        <div class="row align-items-start no-gutters portfolio-items">
+            <div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
+                <div class="card">
+                    <img src="assets/img/shots/1.png" alt="Card Image" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-details">
+                            <h2><a href="#">Gorgeous white rose photo</a></h2>
+                            <p class="text-muted card-text">by Galina N (@galina88)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="flower">
+                <div class="card">
+                    <img src="assets/img/shots/2.png" alt="Card Image" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-details">
+                            <h2><a href="#">Yellow Sunflower</a></h2>
+                            <p class="text-muted card-text">Aaron Burden (@aaronburden)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
+                <div class="card">
+                    <img src="assets/img/shots/3.png" alt="Card Image" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-details">
+                            <h2><a href="#">Sunset by the sea</a></h2>
+                            <p class="text-muted card-text">Jordan McQueen (@jordanfmcqueen)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
+                <div class="card">
+                    <img src="assets/img/shots/4.png" alt="Card Image" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-details">
+                            <h2><a href="#">Icy blue mountain range</a></h2>
+                            <p class="text-muted card-text">Elena Prokofyeva ( leni_eleni)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="sea">
+                <div class="card">
+                    <img src="assets/img/shots/5.png" alt="Card Image" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-details">
+                            <h2><a href="#">Rock, water, sea and coast</a></h2>
+                            <p class="text-muted card-text">Jon Tyson (@jontyson)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pi-item col-xl-3 col-lg-4 col-sm-6 col-xs-12" data-type="mountain">
+                <div class="card">
+                    <img src="assets/img/shots/6.png" alt="Card Image" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-details">
+                            <h2><a href="#">Mountain, snow, landscape and rock</a></h2>
+                            <p class="text-muted card-text">Lance Anderson (@lanceanderson)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-sizer col-xl-3 col-lg-4 col-sm-6 col-xs-12"></div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-md-6">
+                    <p>© Copyright 2018. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <p>Created with <span style="color:red;">♥</span> by <a href="https://github.com/mobihack">mobihack</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <!--<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-	<script type="text/javascript">window.onload = function(){
-		var elem = document.querySelector('.portfolio-items');
-	var msnry = new Masonry( elem, {
-	// options
-	itemSelector: '.pi-item',
-	columnWidth: '.grid-sizer',
-	percentPosition: true
-	});
-	
-};
-	</script>
-	<script type="text/javascript">
-	var deleteLinks = document.querySelectorAll('a[data-filter]');
-	Array.from(deleteLinks).forEach(link => {
-	link.addEventListener('click', function(event) {
-	Array.from(deleteLinks).forEach(link2 => {
-		link2.parentNode.classList.remove("is-active");
-		if(event.target.dataset.type==link2.dataset.type){
-			link2.parentNode.classList.add("is-active");
-		}
-	});
-	var items = document.querySelectorAll('.pi-item');
-	Array.from(items).forEach(item => {
-		//console.log(item);
-		
-		if(event.target.dataset.type!='filter-reset' && event.target.dataset.type!=item.dataset.type){
-			item.classList.add("is-hidden");
-			setTimeout(function(){ item.classList.add("is-none"); }, 350);
-		}else{
-			item.classList.remove("is-none");
-			item.classList.add("is-shown");
-			setTimeout(function(){ item.classList.remove("is-hidden"); }, 350);
-			
-			
-		}
-
-	});
-	});
-	});
-
-	</script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/js/portfolio.js"></script>
 </body>
+
 </html>
