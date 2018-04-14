@@ -1081,7 +1081,7 @@
 	<!--<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript">window.onload = function(){
 		var elem = document.querySelector('.portfolio-items');
 	var msnry = new Masonry( elem, {
 	// options
@@ -1089,6 +1089,8 @@
 	columnWidth: '.grid-sizer',
 	percentPosition: true
 	});
+	
+};
 	</script>
 	<script type="text/javascript">
 	var deleteLinks = document.querySelectorAll('a[data-filter]');
